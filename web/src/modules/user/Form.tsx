@@ -39,6 +39,7 @@ export class Form extends React.PureComponent<Props, State> {
       >
         <div>
           <Input
+            data-testid="email"
             label="EMAIL"
             type="text"
             name="email"
@@ -47,6 +48,7 @@ export class Form extends React.PureComponent<Props, State> {
             onChange={this.handleChange}
           />
           <Input
+            data-testid="password"
             label="PASSWORD"
             type="password"
             name="password"
@@ -54,7 +56,10 @@ export class Form extends React.PureComponent<Props, State> {
             value={password}
             onChange={this.handleChange}
           />
-          <RedButton onClick={() => this.props.onSubmit(this.state)}>
+          <RedButton
+            data-testid="submit"
+            onClick={() => this.props.onSubmit(this.state)}
+          >
             {this.props.buttonText}
           </RedButton>
         </div>
