@@ -22,10 +22,12 @@ export class RegisterView extends React.PureComponent<RouteComponentProps<{}>> {
           <Form
             buttonText="register"
             onSubmit={async data => {
+              console.log(data, "data");
               const response = await mutate({
                 variables: data
               });
-              console.log(response);
+              console.log("it is not comming here");
+              console.log("response", response);
               this.props.history.push("/login");
             }}
           />
